@@ -1,13 +1,8 @@
 import './globals.css'
-import { useState } from 'react'
-
-export default function Home() {
-...
-import './globals.css'
 
 export const metadata = {
-  title: 'PortalStack',
-  description: 'Dashboard Starter',
+  title: 'PortalStack V2',
+  description: 'Private Admin Portal',
 }
 
 export default function RootLayout({
