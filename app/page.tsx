@@ -15,30 +15,25 @@ export default function Home() {
 
   if (loggedIn) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-gray-100">
-        <h1 className="text-3xl font-bold mb-4">PortalStack Admin Panel</h1>
-        <p className="mb-6">Welcome Admin</p>
-        <div className="flex gap-4">
-          <button className="px-4 py-2 bg-blue-500 text-white rounded">Manage Users</button>
-          <button className="px-4 py-2 bg-green-500 text-white rounded">View Logs</button>
-          <button className="px-4 py-2 bg-gray-500 text-white rounded">Settings</button>
-        </div>
-        <button onClick={() => setLoggedIn(false)} className="mt-6 px-4 py-2 bg-red-500 text-white rounded">Logout</button>
+      <main style={{display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', background: '#f5f5f5'}}>
+        <h1 style={{fontSize: '30px', fontWeight: 'bold', marginBottom: '10px'}}>PortalStack Admin Panel</h1>
+        <p>Welcome Admin</p>
+        <button onClick={() => setLoggedIn(false)} style={{marginTop: '20px', padding: '10px 20px', background: 'red', color: 'white', border: 'none', borderRadius: '5px'}}>Logout</button>
       </main>
     )
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">PortalStack Login</h1>
+    <main style={{display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', background: '#f5f5f5'}}>
+      <h1 style={{fontSize: '30px', fontWeight: 'bold', marginBottom: '20px'}}>PortalStack Login</h1>
       <input 
         type="password" 
         placeholder="Enter Access Key" 
         value={key}
         onChange={(e) => setKey(e.target.value)}
-        className="border p-2 rounded mb-4 w-64"
+        style={{padding: '10px', borderRadius: '5px', border: '1px solid gray', width: '250px', marginBottom: '10px'}}
       />
-      <button onClick={handleLogin} className="px-6 py-2 bg-blue-600 text-white rounded">Login</button>
+      <button onClick={handleLogin} style={{padding: '10px 20px', background: 'blue', color: 'white', border: 'none', borderRadius: '5px'}}>Login</button>
     </main>
   )
 }
